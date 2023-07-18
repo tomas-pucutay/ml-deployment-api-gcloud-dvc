@@ -8,11 +8,9 @@ pandas = "*"
 scikit-learn = "*"
 matplotlib = "*"
 seaborn = "*"
+dvc = {version = "*", extras = ["gs"]}
 
 [dev-packages]
 
 [requires]
-python_version = "3.8"
-
-[packages.dvc]
-extras = [ "gs",]
+python_version = "3.10"
