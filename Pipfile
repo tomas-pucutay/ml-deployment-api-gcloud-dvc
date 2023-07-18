@@ -7,7 +7,7 @@ name = "pypi"
 scikit-learn = "*"
 pandas = "*"
 cookiecutter = "*"
-dvc = "*"
+dvc = {version = "*", extras = ["gs"]}
 
 [dev-packages]
 
