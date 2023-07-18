@@ -1,2 +1,5 @@
+.ipynb_checkpoints/
+*.csv
+*.pkl
 Pipfile.lock
 key.json
