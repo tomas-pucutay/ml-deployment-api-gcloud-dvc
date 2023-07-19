@@ -2,4 +2,6 @@
 *.csv
 *.pkl
 Pipfile.lock
+report.txt
+*.png
 key.json
