@@ -9,9 +9,10 @@ scikit-learn = "*"
 matplotlib = "*"
 seaborn = "*"
 dvc = {version = "*", extras = ["gs"]}
-fastapi = "*"
 uvicorn = "*"
 gunicorn = "*"
+pytest = "*"
+fastapi = "*"
 
 [dev-packages]
 
