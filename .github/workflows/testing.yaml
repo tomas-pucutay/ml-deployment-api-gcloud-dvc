@@ -18,7 +18,6 @@ jobs:
       - name: Installing dependencies
         run: |
           pipenv install -r requirements.txt
-          pipenv install scikit-learn==1.3.0
       - name: Test API
         run: |
           export GOOGLE_APPLICATION_CREDENTIALS=$(python utilities/setter.py)
