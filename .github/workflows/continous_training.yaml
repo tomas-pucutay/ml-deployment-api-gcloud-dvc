@@ -53,7 +53,7 @@ jobs:
       - uses: iterative/setup-cml@v1
       - name: Push metrics
         env:
-          REPO_TOKEN: ${{ secrets.TOKEN }}
+          REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           cat report.txt >> report.md
         #  echo '![](prediction_behaviour.png)' >> report.md
