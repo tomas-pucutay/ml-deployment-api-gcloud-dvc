@@ -1,0 +1,25 @@
+name: Testing API
+on: [push, pull_request]
+jobs:
+  testing-api:
+    runs-on: ubuntu-latest
+    env:
+      SERVICE_ACCOUNT_KEY: ${{ secrets.SERVICE_ACCOUNT_KEY }}
+    steps:
+      - name: Set up Python 3.10
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.10.6"
+      - name: Checkout the repo
+        uses: actions/checkout@v3
+      - name: Creating and activating virtualenv
+        run: |
+          pip3 install pipenv
+      - name: Installing dependencies
+        run: |
+          pipenv install -r requirements.txt
+      - name: Test API
+        run: |
+          export GOOGLE_APPLICATION_CREDENTIALS=$(python utilities/setter.py)
+          pipenv run dvc pull model/model.pkl -r model-track
+          pipenv run pytest
