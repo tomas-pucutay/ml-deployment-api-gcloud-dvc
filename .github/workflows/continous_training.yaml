@@ -11,6 +11,12 @@ on:
         description: Why to run this?
         required: false
         default: running CT
+permissions:
+  id-token:write
+  contents:write
+  pull-requests:write 
+  issues:read
+  packages:none
 jobs:
   continuous-training:
     runs-on: ubuntu-latest
