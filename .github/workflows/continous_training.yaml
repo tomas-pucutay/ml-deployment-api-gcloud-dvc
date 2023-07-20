@@ -21,6 +21,10 @@ jobs:
   continuous-training:
     runs-on: ubuntu-latest
     steps:
+      - name: Set up Node 16
+        uses: actions/setup-node@v1
+        with:
+          node-version: '16'
       - name: Set up Python 3.10
         uses: actions/setup-python@v2
         with:
