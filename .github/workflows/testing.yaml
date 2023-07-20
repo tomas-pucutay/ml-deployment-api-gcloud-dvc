@@ -16,6 +16,6 @@ jobs:
           pipenv install -r requirements.txt
       - name: Test API
         run: |
-          export GOOGLE_APPLICATION_CREDENTIALS=$(python utlities/setter.py)
+          export GOOGLE_APPLICATION_CREDENTIALS=$(python utilities/setter.py)
           dvc pull model/model.pkl -r model-track
           pytest
