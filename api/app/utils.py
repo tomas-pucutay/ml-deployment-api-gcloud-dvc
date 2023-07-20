@@ -7,7 +7,8 @@ from io import BytesIO
 
 def get_model() -> Pipeline:
     model_path = os.environ.get('MODEL_PATH', 'model/model.pkl')
-    model = load(model_path)
+    with open(model_path, 'rb') as model_file:
+        model = load(BytesIO(model_file.read()))
     return model
 
 def transform_to_dataframe(class_model: BaseModel) -> DataFrame:

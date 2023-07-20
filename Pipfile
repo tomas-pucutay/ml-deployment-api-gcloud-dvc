@@ -5,7 +5,7 @@ name = "pypi"
 
 [packages]
 pandas = "*"
-scikit-learn = "*"
+scikit-learn = "==1.2.2"
 matplotlib = "*"
 seaborn = "*"
 dvc = {version = "*", extras = ["gs"]}
