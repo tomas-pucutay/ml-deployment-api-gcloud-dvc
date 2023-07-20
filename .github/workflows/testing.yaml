@@ -11,7 +11,6 @@ jobs:
       - name: Creating and activating virtualenv
         run: |
           pip3 install pipenv
-          pipenv shell
       - name: Installing dependencies
         run: |
           pipenv install -r requirements.txt
