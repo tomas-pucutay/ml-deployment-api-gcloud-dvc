@@ -13,6 +13,7 @@ uvicorn = "*"
 gunicorn = "*"
 pytest = "*"
 fastapi = "*"
+httpx = "*"
 
 [dev-packages]
 
