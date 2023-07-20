@@ -57,4 +57,4 @@ jobs:
         run: |
           cat report.txt >> report.md
           echo "![](./prediction_behaviour.png)">> report.md
-          cml-comment create report.md
+          cml comment create report.md
