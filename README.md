@@ -55,29 +55,29 @@ pipenv install -r requirements.txt
    - The dataframe names are finantials, movies, opening_gross.
 
 2. Make an ML model: Preprocessing and modelling.
-- Preprocessing the dataframes and converting into full_data.
-- Modeling with cross-validation and hyperparameter tuning with Grid Search CV.
-- Export a .pkl model in the model folder.
+   - Preprocessing the dataframes and converting into full_data.
+   - Modeling with cross-validation and hyperparameter tuning with Grid Search CV.
+   - Export a .pkl model in the model folder.
 
 3. Serialization and data pipeline: Tracking for the data and model.
-- Creating storage in a cloud provider (w/ Google Storage in this case), these steps are in gstorage-config.sh.
-- Tracking .csv (data) and .pkl (model) with DVC.
-- Yaml for dvc to reproduce steps on preprocessing and training the model.
+   - Creating storage in a cloud provider (w/ Google Storage in this case), these steps are in gstorage-config.sh.
+   - Tracking .csv (data) and .pkl (model) with DVC.
+   - Yaml for dvc to reproduce steps on preprocessing and training the model.
 
 4. Build API locally: Building an endpoint to get the prediction.
-- Using FastAPI in the api folder to create an API from the .pkl model.
-- Configuring tests with pytest for predictions.
+   - Using FastAPI in the api folder to create an API from the .pkl model.
+   - Configuring tests with pytest for predictions.
 
 5. Build container locally: Containerization.
-- Using Docker to make a Dockerfile to package and deploy API.
-- Creating initializer.sh with gunicorn for container deploy with workers.
+   - Using Docker to make a Dockerfile to package and deploy API.
+   - Creating initializer.sh with gunicorn for container deploy with workers.
 
 6. Implementing workflows: For testing, continuous training, and CI/CD purposes.
-- Creating a serverless service in a cloud provider (w/ Cloud Run in this case), these steps are in gcloudrun-config.sh.
-- Workflows with GitHub actions in .github/workflows.
-- Testing with the test with pytest made.
-- Continuous training with DVC repro and CML (Continuous Machine Learning).
-- CI/CD with Google Cloud and Docker (w/ logic to be called after Continuous Training).
+   - Creating a serverless service in a cloud provider (w/ Cloud Run in this case), these steps are in gcloudrun-config.sh.
+   - Workflows with GitHub actions in .github/workflows.
+   - Testing with the test with pytest made.
+   - Continuous training with DVC repro and CML (Continuous Machine Learning).
+   - CI/CD with Google Cloud and Docker (w/ logic to be called after Continuous Training).
 
 ## Improvement areas
 There are many opportunities, some of them are:
