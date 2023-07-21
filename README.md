@@ -52,7 +52,7 @@ pipenv install -r requirements.txt
 
 ## Step by Step
 1. Get the data: Gather data.
-- The dataframe names are finantials, movies, opening_gross.
+   - The dataframe names are finantials, movies, opening_gross.
 
 2. Make an ML model: Preprocessing and modelling.
 - Preprocessing the dataframes and converting into full_data.
