@@ -1,0 +1,12 @@
+gcloud run deploy deployment-test-ml-service \
+  --image=us-docker.pkg.dev/cloudrun/container/hello \
+  --region=us-central1 \
+  --platform=managed \
+  --cpu=1 \
+  --memory=1Gi \
+  --min-instances=1 \
+  --max-instances=10 \
+  --port=8000 \
+  --concurrency=10 \
+  --timeout=300 \
+  --allow-unauthenticated
