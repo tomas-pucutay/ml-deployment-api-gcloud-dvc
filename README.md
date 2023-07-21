@@ -24,3 +24,28 @@ Not quite long! This project was not intended to make a "good" ML model but for 
 | `imdb_score`      | `float` |
 
 and get the worldwide gross in return.
+
+## Technologies
+- Programming Language: Python.
+- Tracking: DVC + Git.
+- API Deployment: FastAPI
+- Containerization: Docker.
+- Workflows CI/CD: GitHub Actions.
+- Cloud: Google Cloud Platform.
+
+## Requirements
+Environment variables as secrets in the GitHub Repository required:
+- SERVICE_ACCOUNT_KEY: JSON obtained from the service account with the IAM roles roles/storage.admin, roles/run.admin, roles/artifactregistry.admin, roles/iam.serviceAccountUser. Should be decoded with base64 before adding.
+- REGISTRY_NAME: Name for the container.
+- REGION: ID for the region in Cloud Run Service.
+- PROJECT_ID: ID for the project in Google Cloud Platform.
+- SERVICE_NAME: ID for the Cloud Run service.
+
+These will be added safely in the YAML for GitHub Actions.
+
+## First Step
+Fork the repository, clone it, and install the virtual environment, then activate.
+```bash
+git clone [repository-url]
+pipenv install -r requirements.txt
+```
