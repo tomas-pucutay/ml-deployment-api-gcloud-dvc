@@ -49,3 +49,47 @@ Fork the repository, clone it, and install the virtual environment, then activat
 git clone [repository-url]
 pipenv install -r requirements.txt
 ```
+
+## Step by Step
+1. Get the data: Gather data.
+- The dataframe names are finantials, movies, opening_gross.
+
+2. Make an ML model: Preprocessing and modelling.
+- Preprocessing the dataframes and converting into full_data.
+- Modeling with cross-validation and hyperparameter tuning with Grid Search CV.
+- Export a .pkl model in the model folder.
+
+3. Serialization and data pipeline: Tracking for the data and model.
+- Creating storage in a cloud provider (w/ Google Storage in this case), these steps are in gstorage-config.sh.
+- Tracking .csv (data) and .pkl (model) with DVC.
+- Yaml for dvc to reproduce steps on preprocessing and training the model.
+
+4. Build API locally: Building an endpoint to get the prediction.
+- Using FastAPI in the api folder to create an API from the .pkl model.
+- Configuring tests with pytest for predictions.
+
+5. Build container locally: Containerization.
+- Using Docker to make a Dockerfile to package and deploy API.
+- Creating initializer.sh with gunicorn for container deploy with workers.
+
+6. Implementing workflows: For testing, continuous training, and CI/CD purposes.
+- Creating a serverless service in a cloud provider (w/ Cloud Run in this case), these steps are in gcloudrun-config.sh.
+- Workflows with GitHub actions in .github/workflows.
+- Testing with the test with pytest made.
+- Continuous training with DVC repro and CML (Continuous Machine Learning).
+- CI/CD with Google Cloud and Docker (w/ logic to be called after Continuous Training).
+
+## Improvement areas
+There are many opportunities, some of them are:
+- Test more regression models, different than GradientBoostingRegressor to avoid overfitting.
+- Implement improvements in code readability like OOP programming.
+- Implement a workflow for data gathering.
+- Trying other cloud providers.
+- Using different frameworks: Streamlit, Gradio, MLflow, and so on.
+
+## Acknowledgments
+This project has been made possible thanks to the support of [Gerson Perdomo](https://github.com/gersonrpq) for their valuable knowledge in Platzi Course [ML Ops](https://platzi.com/cursos/ml-ops/).
+
+If you have any questions, comments, or suggestions, feel free to reach out to me.
+
+Best of luck!
