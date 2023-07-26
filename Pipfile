@@ -4,16 +4,16 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-pandas = "*"
+pandas = "==2.0.3"
 scikit-learn = "==1.2.2"
-matplotlib = "*"
-seaborn = "*"
-dvc = {version = "*", extras = ["gs"]}
-uvicorn = "*"
-gunicorn = "*"
-pytest = "*"
-fastapi = "*"
-httpx = "*"
+matplotlib = "==3.7.2"
+seaborn = "==0.12.2"
+dvc = {version = "==3.8.1", extras = ["gs"]}
+uvicorn = "==0.23.1"
+gunicorn = "==21.2.0"
+pytest = "==7.4.0"
+fastapi = "==0.100.0"
+httpx = "==0.24.1"
 
 [dev-packages]
 
